@@ -16,7 +16,7 @@ public class HelloWildFlyController {
         	@Autowired
 	private CarrierRepository carrierRepository;
         
-@Value("${app.team}")
+@Value("${appTeam}")
         private String appTeam;
     @RequestMapping("hello")
     public String sayHello(){
