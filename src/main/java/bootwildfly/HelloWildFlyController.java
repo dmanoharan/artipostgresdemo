@@ -24,7 +24,7 @@ public class HelloWildFlyController {
     }
         
         @RequestMapping("carriers")
-    public Iterable<Carrier> sayHello(){
+    public Iterable<Carrier> sayHello1(){
         return carrierRepository.findAll();;
     }
 }
