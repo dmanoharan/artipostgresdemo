@@ -12,7 +12,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import java.lang.Iterable;
 import bootwildfly.Carrier;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+
 @RestController
+@RefreshScope
 public class HelloWildFlyController {
 	private static final Logger logger = LoggerFactory.getLogger(HelloWildFlyController.class);
 
