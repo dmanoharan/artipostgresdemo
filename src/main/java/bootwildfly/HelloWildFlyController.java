@@ -1,5 +1,7 @@
 package bootwildfly;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +14,7 @@ import java.lang.Iterable;
 import bootwildfly.Carrier;
 @RestController
 public class HelloWildFlyController {
+	private static final Logger logger = LoggerFactory.getLogger(HelloWildFlyController.class);
 
         	@Autowired
 	private CarrierRepository carrierRepository;
@@ -25,6 +28,7 @@ public class HelloWildFlyController {
         
         @RequestMapping("carriers")
     public Iterable<Carrier> sayHello1(){
+	    logger.info("Retrieving carriers from db");
         return carrierRepository.findAll();
     }
 }
